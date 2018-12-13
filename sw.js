@@ -1,4 +1,4 @@
-const CACHE ='JS'
+const CACHE ='JS4PT'
 function installCB(e) {
     console.log('installed', e.request);
 }
@@ -14,7 +14,7 @@ function save(req, resp) {
 }
 function fetchCB(e) { //fetch first
     let req = e.request
-    console.log('JS', req.url);
+    console.log('JS4PT', req.url);
     e.respondWith(
         fetch(req).then(r2 => save(req, r2))
             .catch(() => { return caches.match(req).then(r1 => r1) })
